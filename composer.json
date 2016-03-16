@@ -1,0 +1,45 @@
+{
+  "name": "weareitsolutions/smartcandymachine",
+  "description": "This is a very cool package!",
+  "version": "1.0.0",
+  "homepage": "http://www.smartcandymachine.nl",
+  "time": "2016-03-16",
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "Xavier Lacot",
+      "email": "xlacot@jolicode.com",
+      "homepage": "http://www.lacot.org",
+      "role": "Developer"
+    },
+    {
+      "name": "Benjamin Clay",
+      "email": "bclay@jolicode.com",
+      "homepage": "https://github.com/ternel",
+      "role": "Developer"
+    },
+    {
+      "name": "Benjamin Clay",
+      "email": "bclay@jolicode.com",
+      "homepage": "https://github.com/ternel",
+      "role": "Developer"
+    }
+  ],
+  "require": {
+    "php": ">=5.4.0",
+    "guzzlehttp/guzzle": "~3.7",
+    "psr/log": "1.0.0",
+    "twbs/bootstrap": "3.3.6"
+  },
+  "autoload": {
+    "psr-4": {
+      "": "htdocs/"
+    }
+  },
+  "scripts": {
+    "post-update-cmd": [
+      "mkdir -p public/bootstrap",
+      "cp -R vendor/twbs/bootstrap/dist/ public/bootstrap/"
+    ]
+  }
+}
