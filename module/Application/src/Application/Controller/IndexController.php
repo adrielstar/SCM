@@ -1,21 +1,33 @@
 <?php
-/**
- * Zend Framework (http://framework.zend.com/)
- *
- * @link      http://github.com/zendframework/ZendSkeletonApplication for the canonical source repository
- * @copyright Copyright (c) 2005-2015 Zend Technologies USA Inc. (http://www.zend.com)
- * @license   http://framework.zend.com/license/new-bsd New BSD License
- */
 
 namespace Application\Controller;
 
 use Zend\Mvc\Controller\AbstractActionController;
 use Zend\View\Model\ViewModel;
 
+use Application\Model\ThingSpeak\Field\Temperature;
+use Application\Model\ThingSpeak\Channel\Feed;
+
 class IndexController extends AbstractActionController
 {
+
     public function indexAction()
     {
-        return new ViewModel();
+        $request = $this->getRequest();
+        $size = (int) $request->getQuery('size');
+
+        // Fixed values
+        if (!($size > 5) || $size > 1000) {
+            $size = 5;
+        }
+
+        $feed = new Feed();
+        $feeds = $feed->getFeeds($size);
+
+//        $feed = $this->_getFeedData();
+        return new ViewModel(array(
+            'feed' => $feeds
+            )
+        );
     }
 }
