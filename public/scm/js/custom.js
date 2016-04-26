@@ -38,9 +38,6 @@ $(".thingsspeak-data").click(function () {
     myLine = new Chart(ctx).Line(lineChartData, {
         responsive: true
     });
-});
 
-//    temperature in degree celsius
-//    air pressure in pascal
-//    humidity in %
-//    battery in mv
+    $("#data-type").html(dataTypes[this.id]);
+});
