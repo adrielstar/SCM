@@ -17,12 +17,27 @@ foreach ($this->feed as $measure) {
 ?>
 
 <div class="row">
-    <div class="col-lg-12">
+    <div class="col-lg-10">
         <button class="thingsspeak-data" id="temperature"><?php echo $this->translate('Temperature'); ?></button>
         <button class="thingsspeak-data" id="airPressure"><?php echo $this->translate('Air pressure'); ?></button>
         <button class="thingsspeak-data" id="humidity"><?php echo $this->translate('Humidity'); ?></button>
         <button class="thingsspeak-data" id="battery"><?php echo $this->translate('Battery'); ?></button>
         <p></p>
+    </div>
+    <div class="dev-marker col-lg-2">
+        <div class="pull-right">
+            <div class="btn-group">
+                <button type="button" class="btn btn-default btn-xs dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
+                    Amount of data points
+                    <span class="caret"></span>
+                </button>
+                <ul class="dropdown-menu pull-right" role="menu">
+                    <?php for ($i = 1; $i < 5; $i++) :?>
+                        <li><a href="#"><?php echo $i * 20; ?></a></li>
+                    <?php endfor;?>
+                </ul>
+            </div>
+        </div>
     </div>
 </div>
 

@@ -18,14 +18,7 @@
             ->prependStylesheet($this->basePath('bootstrap/css/bootstrap.min.css'))
         ?>
 
-        <!-- Scripts -->
-        <?php echo $this->headScript()
-            ->prependFile($this->basePath('js/Chart.min.js'))
-            ->prependFile($this->basePath('bootstrap/js/bootstrap.min.js'))
-            ->prependFile($this->basePath('js/jquery-1.12.1.js'))
-            ->prependFile($this->basePath('https://cdnjs.cloudflare.com/ajax/libs/respond.js/1.4.2/respond.js'), 'text/javascript', array('conditional' => 'lt IE 9',))
-            ->prependFile($this->basePath('js/html5shiv.min.js'),   'text/javascript', array('conditional' => 'lt IE 9',))
-        ; ?>
+
 
     </head>
     <body>
@@ -73,18 +66,17 @@
     </div>
     <!-- /#wrapper -->
 
-    <!-- jQuery -->
-    <script src="bower_components/jquery/dist/jquery.min.js"></script>
+    <!-- Scripts -->
+    <?php echo $this->headScript()
+        ->prependFile($this->basePath('scm/js/custom.js'))
+        ->prependFile($this->basePath('dist/js/sb-admin-2.js'))
+        ->prependFile($this->basePath('bower_components/metisMenu/dist/metisMenu.min.js'))
+        ->prependFile($this->basePath('js/Chart.min.js'))
+        ->prependFile($this->basePath('bootstrap/js/bootstrap.min.js'))
+        ->prependFile($this->basePath('js/jquery-1.12.1.js'))
+        ->prependFile($this->basePath('https://cdnjs.cloudflare.com/ajax/libs/respond.js/1.4.2/respond.js'), 'text/javascript', array('conditional' => 'lt IE 9',))
+        ->prependFile($this->basePath('js/html5shiv.min.js'),   'text/javascript', array('conditional' => 'lt IE 9',))
+    ; ?>
 
-    <!-- Bootstrap Core JavaScript -->
-    <script src="bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
-
-    <!-- Metis Menu Plugin JavaScript -->
-    <script src="bower_components/metisMenu/dist/metisMenu.min.js"></script>
-
-    <!-- Custom Theme JavaScript -->
-    <script src="dist/js/sb-admin-2.js"></script>
-
-    <script src="scm/js/custom.js"></script>
     </body>
 </html>
