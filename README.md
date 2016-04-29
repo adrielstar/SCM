@@ -19,3 +19,25 @@ The application receives real time data from the thingsspeak API.
 
 <p>Install Composer packages</p>
 ```php composer.phar install```
+
+<h3>Installation</h3>
+<h4>Windows</h4>
+
+<p>Fork this repository</p>
+<p>Clone repository on local machine</p>
+```git clone git@github.com:[username]/scm.git```
+
+<p>Change directory</p>
+```cd scm```
+
+<p>Download Composer and install </p>
+```https://getcomposer.org/Composer-Setup.exe```
+
+<p> Install-dir</p>
+```php composer-setup.php --install-dir=bin```
+
+<p>Specify the filename (default: composer.phar)</p>
+```php composer-setup.php --filename=composer```
+
+<p>Install Composer packages</p>
+```composer install```
