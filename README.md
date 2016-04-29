@@ -28,10 +28,12 @@ The application receives real time data from the thingsspeak API.
 ```git clone git@github.com:[username]/scm.git```
 
 <p>Change directory</p>
-```cd scm```
+
 
 <p>Download Composer and install </p>
-```https://getcomposer.org/Composer-Setup.exe```
+```https://getcomposer.org/Composer-Setup.exe
+```
+
 
 <p> Install-dir</p>
 ```php composer-setup.php --install-dir=bin```
